@@ -47,7 +47,6 @@ namespace Homework
                 return this.next != null;
             }
 
-
             public override string ToString()
             {
                 string str = string.Empty;
@@ -55,6 +54,13 @@ namespace Homework
                     return $"[{this.value}, next]=>null";
                 else
                     return $"[{this.value}, next]=>{this.next}";
+            }
+
+            public static Node<T> Creat(int from, int to, int qvuntity)
+            {
+                Node<int> node;
+                Random rnd = new Random();
+                 
             }
         }
 

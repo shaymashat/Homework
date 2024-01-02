@@ -1,4 +1,5 @@
-﻿using static Homework.Nodes;
+﻿using System.Xml.Linq;
+using static Homework.Nodes;
 
 namespace Homework
 {
@@ -95,6 +96,17 @@ namespace Homework
             return IsExistsRecursive(lst.GetNext(), x);
 
 
+        }
+
+        public static Node<T>DeleteValue<T>(Node<T> lst, T value)
+        {
+            Node<T> head = lst;
+            if (lst.GetValue().Equals(value))
+            {
+                head = lst.GetNext();
+                lst.SetNext(null);
+            }
+            return head;
         }
 
 
